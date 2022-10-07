@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Scrolling Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#"class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>  
+        </ul>
+    </header> 
+    <section>
+        <img src="img/stars.png"id="stars">
+        <img src="img/moon.png"id="moon">
+        <img src="img/mountains_behind.png"id="mountains_behind">
+        <h2 id="text">Tuğba Bozkurt</h2>
+        <a href="#sec"id="btn">Explore</a>
+        <img src="img/mountains_front.png"id="mountains_front">
+    </section> 
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur officia pariatur, explicabo magnam ad quae. Velit suscipit, enim facilis obcaecati nesciunt
+        fugit explicabo doloremque nobis eligendi quas, repellendus labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia iure molestiae ducimus, debitis, omnis quis delectus eius sit sed non ea dolorem nihil laboriosam 
+        voluptatibus! Perferendis mollitia modi optio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime facere illo deleniti tenetur eius perferendis voluptates? Voluptas hic at dignissimos incidunt dolorum similique quasi. Ullam asperiores dicta autem sunt incidunt. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde explicabo earum qui tempora repudiandae facilis hic assumenda fuga sint praesentium excepturi distinctio magnam modi, in dolor tenetur. Iure, odio distinctio.
+        <br><br>
+        olor sit amet consectetur, adipisicing elit. Aspernatur officia pariatur, explicabo magnam ad quae. Velit suscipit, enim facilis obcaecati nesciunt
+        fugit explicabo doloremque nobis eligendi quas, repellendus labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia iure molestiae ducimus, debitis, omnis quis delectus eius sit sed non ea dolorem nihil laboriosam 
+        voluptatibus! Perferendis mollitia modi optio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime facere illo deleniti tenetur eius perferendis voluptates? Voluptas hic at dignissimos incidunt dolorum similique quasi. Ullam asperiores dicta autem sunt incidunt. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde explicabo earum qui tempora repudiandae facilis hic assumenda fuga sint praesentium excepturi distinctio magnam modi, in dolor tenetur. Iure, odio distinctio
+        <br><br>olor sit amet consectetur, adipisicing elit. Aspernatur officia pariatur, explicabo magnam ad quae. Velit suscipit, enim facilis obcaecati nesciunt
+        fugit explicabo doloremque nobis eligendi quas, repellendus labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia iure molestiae ducimus, debitis, omnis quis delectus eius sit sed non ea dolorem nihil laboriosam 
+        voluptatibus! Perferendis mollitia modi optio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime facere illo deleniti tenetur eius perferendis voluptates? Voluptas hic at dignissimos incidunt dolorum similique quasi. Ullam asperiores dicta autem sunt incidunt. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde explicabo earum qui tempora repudiandae facilis hic assumenda fuga sint praesentium excepturi distinctio magnam modi, in dolor tenetur. Iure, odio distinctio
+        olor sit amet consectetur, adipisicing elit. Aspernatur officia pariatur, explicabo magnam ad quae. Velit suscipit, enim facilis obcaecati nesciunt
+        fugit explicabo doloremque nobis eligendi quas, repellendus labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia iure molestiae ducimus, debitis, omnis quis delectus eius sit sed non ea dolorem nihil laboriosam 
+        voluptatibus! Perferendis mollitia modi optio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime facere illo deleniti tenetur eius perferendis voluptates? Voluptas hic at dignissimos incidunt dolorum similique quasi. Ullam asperiores dicta autem sunt incidunt. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde explicabo earum qui tempora repudiandae facilis hic assumenda fuga sint praesentium excepturi distinctio magnam modi, in dolor tenetur. Iure, odio distinctio
+        <br><br>olor sit amet consectetur, adipisicing elit. Aspernatur officia pariatur, explicabo magnam ad quae. Velit suscipit, enim facilis obcaecati nesciunt
+        fugit explicabo doloremque nobis eligendi quas, repellendus labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officia iure molestiae ducimus, debitis, omnis quis delectus eius sit sed non ea dolorem nihil laboriosam 
+        voluptatibus! Perferendis mollitia modi optio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime facere illo deleniti tenetur eius perferendis voluptates? Voluptas hic at dignissimos incidunt dolorum similique quasi. Ullam asperiores dicta autem sunt incidunt. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde explicabo earum qui tempora repudiandae facilis hic assumenda fuga sint praesentium excepturi distinctio magnam modi, in dolor tenetur. Iure, odio distinctio
+    </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text')
+        let btn = document.getElementById('btn')
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 +'px';
+            moon.style.top = value * 1.05 +'px';
+            mountains_behind.style.top = value * 0.5 +'px';
+            mountains_front.style.top = value * 0 +'px';
+            text.style.marginRight = value * 4 +'px';
+            text.style.marginTop = value * 1.5 +'px';
+            btn.style.marginTop = value * 1.5 +'px';
+            header.style.top = value * 0.5 +'px';
+        });
+       
+    </script>
+</body>
+</html>
